@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance, sua ajuda financeira.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="body.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Finance - Sua ajuda financeira</h1>
+    </header>
+    <main>
+        <form id="questionario">
+            <h2>Insira seus dados financeiros:</h2>
+            <div>
+                <label for="renda">Renda Mensal:</label>
+                <input type="number" id="renda" placeholder="Ex.: 5000" required>
+            </div>
+            <h3>Despesas Fixas:</h3>
+            <div id="despesasFixasContainer">
+                <div class="despesa">
+                    <label for="despesaFixa1">Descrição:</label>
+                    <input type="text" id="descricaoFixa1" placeholder="Ex.: Aluguel">
+                    <label for="valorFixa1">Valor:</label>
+                    <input type="number" id="valorFixa1" placeholder="Ex.: 1500">
+                </div>
+            </div>
+            <button type="button" id="adicionarDespesaFixa">Adicionar Despesa Fixa</button>
+
+            <h3>Despesas Variáveis:</h3>
+            <div id="despesasVariaveisContainer">
+                <div class="despesa">
+                    <label for="despesaVariavel1">Descrição:</label>
+                    <input type="text" id="descricaoVariavel1" placeholder="Ex.: Lazer">
+                    <label for="valorVariavel1">Valor:</label>
+                    <input type="number" id="valorVariavel1" placeholder="Ex.: 300">
+                </div>
+            </div>
+            <button type="button" id="adicionarDespesaVariavel">Adicionar Despesa Variável</button>
+
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+        <div id="containerGrafico">
+            <canvas id="grafico"></canvas>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Finance - by github.com/devtolps</p>
+    </footer>
+    <script src="scriptfinance.js"></script>
+</body>
+</html>
